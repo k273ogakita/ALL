@@ -356,6 +356,16 @@ footer{background:var(--blue-pale)}
 @media(max-width:520px){
   .works-grid,.service-plans-grid,.option-grid{grid-template-columns:1fr}
 }
+/* splan-card をリンクにしたときの上書き */
+a.splan-card {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+a.splan-card:hover {
+  background: var(--blue-pale);
+}
+  
 </style>
 </head>
 <body>
@@ -379,14 +389,14 @@ footer{background:var(--blue-pale)}
         <a href="#concept">コンセプト<span class="nav-en">Concept</span></a>
       </li>
       <li>
-        <a href="#services">サービス<span class="nav-en">Services</span></a>
-        <ul class="dropdown">
-          <li><a href="#services">説明時間削減・業務効率化プラン</a></li>
-          <li><a href="#services">採用課題解決プラン</a></li>
-          <li><a href="#services">イベント・講演会記録プラン</a></li>
-          <li><a href="#services">信頼度・印象UPプラン</a></li>
-        </ul>
-      </li>
+  <a href="#services">サービス<span class="nav-en">Services</span></a>
+  <ul class="dropdown">
+    <li><a href="services/medical-efficiency.html">説明時間削減・業務効率化プラン</a></li>
+    <li><a href="services/recruitment.html">採用課題解決プラン</a></li>
+    <li><a href="services/event-conference.html">イベント・講演会記録プラン</a></li>
+    <li><a href="services/branding.html">信頼度・印象UPプラン</a></li>
+  </ul>
+</li>
       <li>
         <a href="#option">オプション<span class="nav-en">Option</span></a>
         <ul class="dropdown">
@@ -553,43 +563,44 @@ footer{background:var(--blue-pale)}
     <h2 class="service-intro-title">サービス紹介<em>Service Plans</em></h2>
     <p class="service-intro-sub">事業規模を問わず、ご相談しやすい価格帯と柔軟なプランをご用意しています。</p>
   </div>
-  <div class="service-plans-grid">
-    <div class="splan-card fi">
-      <img src="service1.jpg" alt="説明時間削減・業務効率化プラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
-      <div class="splan-body">
-        <div class="splan-num">01</div>
-        <h3>説明時間削減・業務効率化プラン</h3>
-        <p class="splan-en">Medical Efficiency Plan</p>
-        <p class="splan-desc">患者説明（IC動画）／院内モニター／手術案内<br>疾患・患者教育／医療知識・経験を踏まえて構成</p>
-      </div>
+ <div class="service-plans-grid">
+  <a href="services/medical-efficiency.html" class="splan-card fi">
+    <img src="service1.jpg" alt="説明時間削減・業務効率化プラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
+    <div class="splan-body">
+      <div class="splan-num">01</div>
+      <h3>説明時間削減・業務効率化プラン</h3>
+      <p class="splan-en">Medical Efficiency Plan</p>
+      <p class="splan-desc">患者説明（IC動画）／院内モニター／手術案内<br>疾患・患者教育／医療知識・経験を踏まえて構成</p>
     </div>
-    <div class="splan-card fi fi-delay-1">
-      <img src="service2.jpg" alt="採用課題解決プラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
-      <div class="splan-body">
-        <div class="splan-num">02</div>
-        <h3>採用課題解決プラン</h3>
-        <p class="splan-en">Recruitment Plan</p>
-        <p class="splan-desc">採用動画・求人サイト・導線設計で総合的にサポートも可能。企業の魅力を正しく伝え、求職者に選ばれる採用活動へ。</p>
-      </div>
+  </a>
+  <a href="services/recruitment.html" class="splan-card fi fi-delay-1">
+    <img src="service2.jpg" alt="採用課題解決プラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
+    <div class="splan-body">
+      <div class="splan-num">02</div>
+      <h3>採用課題解決プラン</h3>
+      <p class="splan-en">Recruitment Plan</p>
+      <p class="splan-desc">採用動画・求人サイト・導線設計で総合的にサポートも可能。企業の魅力を正しく伝え、求職者に選ばれる採用活動へ。</p>
     </div>
-    <div class="splan-card fi fi-delay-2">
-      <img src="service3.jpg" alt="イベント・講演会プラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
-      <div class="splan-body">
-        <div class="splan-num">03</div>
-        <h3>イベント・講演会「記録・広報動画プラン」</h3>
-        <p class="splan-en">Event / Conference Plan</p>
-        <p class="splan-desc">地域・行政イベント、講演会、勉強会の記録。アーカイブ・PR両対応、複数カメラで臨場感を演出。</p>
-      </div>
+  </a>
+  <a href="services/event-conference.html" class="splan-card fi fi-delay-2">
+    <img src="service3.jpg" alt="イベント・講演会プラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
+    <div class="splan-body">
+      <div class="splan-num">03</div>
+      <h3>イベント・講演会「記録・広報動画プラン」</h3>
+      <p class="splan-en">Event / Conference Plan</p>
+      <p class="splan-desc">地域・行政イベント、講演会、勉強会の記録。アーカイブ・PR両対応、複数カメラで臨場感を演出。</p>
     </div>
-    <div class="splan-card fi fi-delay-3">
-      <img src="service4.jpg" alt="信頼度・印象UPプラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
-      <div class="splan-body">
-        <div class="splan-num">04</div>
-        <h3>信頼度・印象UPプラン</h3>
-        <p class="splan-en">Branding Plan</p>
-        <p class="splan-desc">医院の魅力を伝え、患者様が安心して通院したくなる動画を作成します。新規患者を増やしたい、他のクリニックと差別化したい、開業記念として形に残したい方におすすめです</p>
-      </div>
+  </a>
+  <a href="services/branding.html" class="splan-card fi fi-delay-3">
+    <img src="service4.jpg" alt="信頼度・印象UPプラン" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block"/>
+    <div class="splan-body">
+      <div class="splan-num">04</div>
+      <h3>信頼度・印象UPプラン</h3>
+      <p class="splan-en">Branding Plan</p>
+      <p class="splan-desc">医院の魅力を伝え、患者様が安心して通院したくなる動画を作成します。新規患者を増やしたい、他のクリニックと差別化したい、開業記念として形に残したい方におすすめです</p>
     </div>
+  </a>
+</div>
   </div>
 </section>
 
