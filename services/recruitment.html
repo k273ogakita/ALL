@@ -5,7 +5,307 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>採用課題解決プラン | nARK</title>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+<style><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>採用課題解決プラン｜求職者は応募の前に必ずHPを見ています | nARK</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
 <style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--black:#1a1a1a;--white:#fff;--offwhite:#f8f7f4;--gray-light:#f0eeea;--gray-mid:#dddad4;--gray-text:#666;--accent:#5a9bb8;--accent-light:#7dbcd4;--blue-deep:#7aafc4;--blue-mid:#b8d9e8;--blue-soft:#ddf0f7;--blue-pale:#f0f8fc;--blue-text:#1e3d4f;--hh-sub:38px;--hh-main:68px;--hh:106px;--num-font:'Inter',sans-serif}
+html{scroll-behavior:smooth}body{font-family:'Noto Sans JP',sans-serif;background:var(--white);color:var(--black);line-height:1.8;font-weight:300;font-size:14px}a{text-decoration:none;color:inherit}
+#site-header{position:fixed;top:0;left:0;width:100%;z-index:1000}
+.header-sub{height:var(--hh-sub);background:var(--offwhite);border-bottom:1px solid var(--gray-mid);display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+.header-sub-left{display:flex;gap:24px}.header-sub-left a{font-size:11px;color:var(--gray-text);transition:color .2s}.header-sub-left a:hover{color:var(--accent)}
+.header-sub-right{font-size:11px;color:var(--gray-text);letter-spacing:.06em}
+.header-sub-right span{display:inline-block;background:var(--accent);color:var(--white);font-size:9px;letter-spacing:.1em;padding:2px 8px;border-radius:1px;margin-right:6px}
+.header-main{height:var(--hh-main);background:rgba(255,255,255,.98);backdrop-filter:blur(10px);border-bottom:1px solid var(--gray-mid);display:flex;align-items:center;justify-content:space-between;padding:0 32px}
+.logo{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:300;letter-spacing:.14em;color:var(--black)}.logo em{font-style:normal;color:var(--accent)}.logo small{display:block;font-size:9px;font-family:'Noto Sans JP',sans-serif;letter-spacing:.25em;color:var(--gray-text);font-weight:300;margin-top:-2px}
+.header-utils{display:flex;gap:12px;align-items:center;margin-left:16px}
+.util-btn{font-size:11px;letter-spacing:.08em;color:var(--gray-text);padding:6px 14px;border:1px solid var(--gray-mid);transition:background .2s,color .2s,border-color .2s}.util-btn:hover{background:var(--accent);color:var(--white);border-color:var(--accent)}
+.util-contact{background:var(--accent);color:var(--white);border-color:var(--accent);padding:8px 18px;transition:background .2s}.util-contact:hover{background:var(--blue-text);border-color:var(--blue-text)}
+.page-hero{margin-top:var(--hh);padding:88px 72px 80px;background:linear-gradient(135deg,var(--blue-pale) 0%,var(--blue-soft) 60%,#f0f8fc 100%);border-bottom:1px solid var(--blue-mid);position:relative;overflow:hidden}
+.page-hero::before{content:'';position:absolute;top:-80px;right:-60px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(90,155,184,.12) 0%,transparent 70%);pointer-events:none}
+.hero-bc{font-size:11px;letter-spacing:.12em;color:var(--gray-text);margin-bottom:20px;display:flex;align-items:center;gap:8px}.hero-bc span{color:var(--gray-mid)}
+.hero-tag{display:inline-block;background:var(--accent);color:var(--white);font-size:10px;letter-spacing:.18em;padding:4px 14px;margin-bottom:20px}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,52px);font-weight:300;line-height:1.25;letter-spacing:.04em;color:var(--blue-text);margin-bottom:20px}
+.page-hero h1 em{font-style:italic;color:var(--accent)}
+.page-hero .hero-sub{font-size:14px;color:var(--blue-text);opacity:.7;line-height:2;max-width:600px;letter-spacing:.06em}
+.sl{font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-bottom:10px;display:flex;align-items:center;gap:12px}
+.sl::before,.sl::after{content:'';display:block;width:28px;height:1px;background:var(--accent)}
+.st{font-family:'Cormorant Garamond',serif;font-size:clamp(22px,3vw,34px);font-weight:300;letter-spacing:.05em;color:var(--black);line-height:1.3;margin-bottom:8px}
+.st em{font-style:italic;color:var(--accent)}
+.st-c{text-align:center}.sl-c{justify-content:center}
+.journey-section{background:var(--white);padding:88px 72px}
+.journey-inner{max-width:960px}
+.journey-lead{font-size:15px;color:#444;line-height:2.2;margin:16px 0 52px;font-weight:300}
+.jflow{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr;align-items:center;margin-bottom:48px}
+.js{text-align:center;padding:28px 12px;background:var(--blue-pale);border:1px solid var(--blue-mid)}
+.js-i{font-size:26px;margin-bottom:10px;display:block}
+.js-l{font-size:12px;font-weight:500;color:var(--blue-text);margin-bottom:4px;line-height:1.4}
+.js-s{font-size:10px;color:var(--gray-text);line-height:1.5}
+.js.dk{background:var(--blue-text);border-color:var(--blue-text)}.js.dk .js-l{color:var(--white)}.js.dk .js-s{color:rgba(255,255,255,.55)}
+.js.ky{background:var(--accent);border-color:var(--accent)}.js.ky .js-l{color:var(--white)}.js.ky .js-s{color:rgba(255,255,255,.8)}
+.jarr{text-align:center;font-size:18px;color:var(--blue-mid)}
+.jbox{background:var(--blue-text);padding:40px 48px;display:flex;align-items:flex-start;gap:28px}
+.jbox-i{font-size:38px;flex-shrink:0;margin-top:4px}
+.jbox-t h3{font-size:16px;font-weight:500;color:var(--white);margin-bottom:12px;line-height:1.6}
+.jbox-t p{font-size:13px;color:rgba(255,255,255,.65);line-height:2}
+.jbox-t strong{color:var(--accent-light)}
+.pain-section{background:var(--offwhite);padding:88px 72px}
+.pain-inner{max-width:900px}
+.pain-intro{font-size:15px;color:#444;line-height:2.1;margin-bottom:44px;font-weight:300}
+.pg{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--gray-mid)}
+.pi{padding:28px 32px;border-bottom:1px solid var(--gray-mid);border-right:1px solid var(--gray-mid);display:flex;align-items:flex-start;gap:16px;transition:background .2s}
+.pi:nth-child(2n){border-right:none}.pi:nth-last-child(-n+2){border-bottom:none}.pi:hover{background:var(--blue-pale)}
+.pn{font-family:var(--num-font);font-size:26px;font-weight:300;color:var(--blue-mid);line-height:1;flex-shrink:0;margin-top:2px}
+.pt{font-size:13px;color:var(--black);line-height:1.9}.pt strong{display:block;font-size:14px;font-weight:500;color:var(--blue-text);margin-bottom:4px}
+.sol-section{background:var(--white);padding:88px 72px}
+.sol-inner{max-width:940px;margin:0 auto}
+.sol-lead{font-size:14px;color:#555;line-height:2;margin:16px 0 48px;text-align:center}
+.sol-cards{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--gray-mid)}
+.sc{background:var(--white);overflow:hidden;transition:box-shadow .3s}.sc:hover{box-shadow:0 8px 32px rgba(30,61,79,.1)}
+.sc-head{padding:32px 36px 24px;border-top:4px solid var(--accent)}
+.sc.b .sc-head{border-top-color:var(--blue-deep)}
+.sc-tag{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin-bottom:12px;display:block}
+.sc.b .sc-tag{color:var(--blue-deep)}
+.sc-tr{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.sc h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:300;color:var(--blue-text);letter-spacing:.04em;line-height:1.3}
+.sc h3 em{font-style:italic;color:var(--accent)}.sc.b h3 em{color:var(--blue-deep)}
+.sc-icon{font-size:36px;flex-shrink:0}
+.sc-body{padding:24px 36px 36px}
+.sc-desc{font-size:13px;color:#555;line-height:2;margin-bottom:20px}.sc-desc strong{color:var(--blue-text)}
+.spl{list-style:none;display:flex;flex-direction:column;gap:10px}
+.spl li{font-size:12px;color:var(--blue-text);line-height:1.8;display:flex;align-items:flex-start;gap:10px}
+.spl li::before{content:'\2713';color:var(--accent);font-weight:700;flex-shrink:0;margin-top:2px}
+.sc.b .spl li::before{color:var(--blue-deep)}
+.tg-section{background:linear-gradient(135deg,var(--blue-text) 0%,#2a5570 100%);padding:80px 72px}
+.tg-inner{max-width:960px;margin:0 auto}
+.tg-section .sl{color:var(--blue-mid)}.tg-section .sl::before,.tg-section .sl::after{background:var(--blue-mid)}
+.tg-section .st{color:var(--white)}.tg-section .st em{color:var(--accent-light)}
+.tg-lead{font-size:14px;color:rgba(255,255,255,.65);line-height:2;margin:16px 0 44px;max-width:600px}
+.tgflow{display:grid;grid-template-columns:1fr 24px 1fr 24px 1fr 24px 1fr;align-items:center}
+.tfs{background:rgba(255,255,255,.07);padding:28px 16px;text-align:center;border-top:3px solid rgba(255,255,255,.12);transition:background .25s}
+.tfs:hover{background:rgba(255,255,255,.14)}
+.tfs.prod{border-top-color:var(--accent-light)}
+.tfs-i{font-size:26px;margin-bottom:10px;display:block}
+.tfs-l{font-size:12px;font-weight:500;color:var(--white);margin-bottom:6px;line-height:1.4}
+.tfs-s{font-size:11px;color:rgba(255,255,255,.5);line-height:1.6}
+.tfs-b{display:inline-block;font-size:9px;letter-spacing:.1em;background:var(--accent);color:var(--white);padding:2px 8px;margin-top:8px}
+.tfa{text-align:center;font-size:16px;color:rgba(255,255,255,.2)}
+.str-section{background:var(--offwhite);padding:88px 72px}
+.str-inner{max-width:920px}
+.str-lead{font-size:14px;color:#555;line-height:2;margin:16px 0 44px;max-width:640px}
+.str-grid{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--gray-mid)}
+.si{background:var(--white);padding:36px 40px;border-left:3px solid transparent;transition:border-color .25s,background .25s}
+.si:hover{border-left-color:var(--accent);background:var(--blue-pale)}
+.si-h{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.si-b{flex-shrink:0;width:32px;height:32px;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--num-font);font-size:14px;color:var(--white);font-weight:600}
+.si h3{font-size:14px;font-weight:500;color:var(--blue-text);letter-spacing:.04em}
+.si p{font-size:12px;color:#666;line-height:1.9;padding-left:46px}
+.tgt-section{background:var(--white);padding:88px 72px}
+.tgt-inner{max-width:960px}
+.tgt-intro{font-size:14px;color:#555;line-height:2;margin:16px 0 40px}
+.tgt-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2px;background:var(--gray-mid)}
+.tc{background:var(--white);padding:36px 32px;border-top:4px solid transparent;transition:border-color .25s,background .25s}
+.tc:hover{border-top-color:var(--accent);background:var(--blue-pale)}
+.tc-rank{font-family:var(--num-font);font-size:11px;letter-spacing:.18em;color:var(--accent);margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.rbadge{display:inline-block;background:var(--accent);color:var(--white);font-size:9px;letter-spacing:.1em;padding:2px 8px}
+.tc h3{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:300;color:var(--blue-text);margin-bottom:12px;letter-spacing:.04em;line-height:1.3}
+.tc h3 em{font-style:italic;color:var(--accent)}
+.tc-r{font-size:12px;color:#555;line-height:1.9;margin-bottom:14px}
+.tc-tags{display:flex;flex-wrap:wrap;gap:6px}
+.tc-tag{font-size:10px;background:var(--blue-soft);color:var(--accent);padding:3px 10px;letter-spacing:.06em}
+.flow-section{background:var(--offwhite);padding:88px 72px}
+.flow-inner{max-width:820px;margin:44px auto 0}
+.fi-item{display:grid;grid-template-columns:56px 1fr;gap:0;position:relative}
+.fi-item:not(:last-child)::after{content:'';position:absolute;left:27px;top:56px;bottom:-32px;width:1px;background:var(--blue-mid)}
+.fi-item+.fi-item{margin-top:32px}
+.fc{width:56px;height:56px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-family:var(--num-font);font-size:18px;color:var(--white);font-weight:600;position:relative;z-index:1}
+.fb{padding:12px 0 12px 28px}
+.fb h3{font-size:14px;font-weight:500;color:var(--blue-text);margin-bottom:6px;letter-spacing:.04em}
+.fb p{font-size:12px;color:#666;line-height:1.9}
+.fd{display:inline-block;font-size:9px;letter-spacing:.14em;background:var(--blue-soft);color:var(--accent);padding:2px 8px;margin-top:8px}
+.faq-section{background:var(--white);padding:88px 72px}
+.faq-inner{max-width:760px;margin:44px auto 0}
+.faq-item{border-bottom:1px solid var(--gray-mid)}
+.faq-q{display:flex;align-items:flex-start;gap:16px;padding:24px 0;cursor:pointer;transition:color .2s}.faq-q:hover{color:var(--accent)}
+.faq-qm{flex-shrink:0;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--accent);line-height:1.2}
+.faq-qt{font-size:14px;font-weight:400;line-height:1.7;padding-top:2px;color:var(--blue-text)}
+.faq-a{display:flex;gap:16px;padding:0 0 24px;max-height:0;overflow:hidden;transition:max-height .35s ease,padding .35s ease}
+.faq-a.open{max-height:400px;padding:4px 0 24px}
+.faq-am{flex-shrink:0;font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:300;color:var(--blue-mid);line-height:1.2}
+.faq-at{font-size:13px;color:#555;line-height:2;padding-top:2px}
+.faq-tg{margin-left:auto;flex-shrink:0;width:20px;height:20px;border:1px solid var(--gray-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--accent);transition:transform .3s,background .2s;margin-top:4px}
+.faq-item.active .faq-tg{transform:rotate(45deg);background:var(--accent);color:var(--white);border-color:var(--accent)}
+.cta-section{background:linear-gradient(135deg,var(--blue-text) 0%,#1a3348 100%);padding:100px 72px;text-align:center}
+.cta-tag{display:inline-block;border:1px solid rgba(255,255,255,.3);font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.7);padding:5px 18px;margin-bottom:24px}
+.cta-section h2{font-family:'Cormorant Garamond',serif;font-size:clamp(28px,4vw,48px);font-weight:300;color:var(--white);line-height:1.3;letter-spacing:.04em;margin-bottom:16px}
+.cta-section h2 em{font-style:italic;color:var(--accent-light)}
+.cta-desc{font-size:13px;color:rgba(255,255,255,.6);line-height:2.1;margin-bottom:40px;letter-spacing:.06em}
+.cta-fb{display:inline-block;background:rgba(90,155,184,.2);border:1px solid var(--accent);color:var(--accent-light);font-size:11px;letter-spacing:.18em;padding:4px 16px;margin-bottom:28px}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cta-bm{background:var(--accent);color:var(--white);border:1px solid var(--accent);padding:16px 52px;font-size:11px;letter-spacing:.28em;transition:background .3s,transform .2s;display:inline-block}.cta-bm:hover{background:var(--accent-light);transform:translateY(-2px)}
+.cta-bs{color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.3);padding:16px 40px;font-size:11px;letter-spacing:.28em;transition:background .3s,color .3s;display:inline-block}.cta-bs:hover{background:rgba(255,255,255,.08);color:var(--white)}
+.cta-note{font-size:11px;color:rgba(255,255,255,.35);margin-top:20px;letter-spacing:.08em}
+footer{background:var(--blue-pale)}
+.fm{padding:52px 60px;border-bottom:1px solid var(--blue-mid)}
+.fl{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;color:var(--blue-text);letter-spacing:.14em;margin-bottom:8px}.fl em{font-style:normal;color:var(--accent)}
+.ftag{font-size:11px;color:var(--blue-text);opacity:.6;letter-spacing:.1em;line-height:1.9;margin-top:12px}
+.fbot{padding:16px 60px;display:flex;justify-content:center;background:var(--blue-mid)}
+.fcopy{font-size:10px;color:var(--blue-text);opacity:.4;letter-spacing:.1em}
+.fi{opacity:0;transform:translateY(20px);transition:opacity .65s ease,transform .65s ease}.fi.on{opacity:1;transform:translateY(0)}.fi-delay-1{transition-delay:.1s}.fi-delay-2{transition-delay:.2s}.fi-delay-3{transition-delay:.3s}
+@media(max-width:960px){:root{--hh-sub:0px;--hh-main:56px;--hh:56px}.header-sub{display:none}.header-main{padding:0 16px}.logo small{display:none}.page-hero,.journey-section,.pain-section,.sol-section,.tg-section,.str-section,.tgt-section,.flow-section,.faq-section{padding:60px 24px}.cta-section{padding:72px 24px}.jflow,.tgflow{grid-template-columns:1fr;gap:2px}.jarr,.tfa{transform:rotate(90deg);display:block;text-align:center;padding:2px 0}.jbox{flex-direction:column;gap:16px;padding:28px 24px}.pg,.sol-cards,.str-grid,.tgt-grid{grid-template-columns:1fr}.pi{border-right:none}.pi:nth-last-child(-n+2){border-bottom:1px solid var(--gray-mid)}.pi:last-child{border-bottom:none}.fm{padding:40px 20px}.fbot{padding:16px 20px}}
+</style>
+</head>
+<body>
+<header id="site-header">
+<div class="header-sub"><div class="header-sub-left"><a href="medical.html">&larr; 医療ページに戻る</a><a href="clinic-branding.html">ブランディング動画</a><a href="medical-efficiency.html">業務効率化プラン</a></div><div class="header-sub-right"><span>Base</span>熊本市北区梶尾町</div></div>
+<div class="header-main"><a href="medical.html" class="logo">n<em>ARK</em><small>visual media</small></a><div class="header-utils"><a href="#contact" class="util-btn">無料相談はこちら</a><a href="mailto:nark.visual.media@gmail.com" class="util-btn util-contact">メールを送る</a></div></div>
+</header>
+
+<section class="page-hero">
+<div class="hero-bc"><a href="medical.html">nARK</a><span>/</span>採用課題解決プラン</div>
+<div class="hero-tag">Recruitment Plan</div>
+<h1>求職者は、応募の前に<br>必ずあなたの病院の<em>HPを見ています。</em></h1>
+<p class="hero-sub">求職者のほとんどは、求人サイトで気になる求人を見つけた後、必ずそのクリニックのホームページを確認してから応募を決めます。「ここなら働いてみたい」と思ってもらえるHPと設計が、採用を変える最も確実な方法です。</p>
+</section>
+
+<section class="journey-section" id="journey">
+<div class="journey-inner">
+<div class="sl fi">Candidate Journey</div>
+<h2 class="st fi">求職者は、こうして<em>応募先を決めています。</em></h2>
+<p class="journey-lead fi">「求人サイトに掲載すれば応募が来る」——実は、そう単純ではありません。求職者の行動を追うと、採用の「本当の勝負どころ」が見えてきます。</p>
+<div class="fi" style="margin-bottom:48px"><img src="customer-journey.jpeg" alt="求職者の応募までの行動フロー" style="width:100%;display:block;border:1px solid var(--blue-mid)"></div>
+<div class="jbox fi">
+<div class="jbox-i">💡</div>
+<div class="jbox-t">
+<h3>HPを見て「なんかいいな」と思えなければ、応募は来ません。</h3>
+<p>求職者がHPで確認するのは「院長はどんな人か」「スタッフの雰囲気はどうか」「本当に働きやすそうか」——<strong>テキストや写真だけでは伝えきれない情報</strong>です。<br>動画があるクリニックは、ここで圧倒的な差をつけることができます。<br>動画を見た求職者は、クリニックの雰囲気やスタッフの雰囲気、病院や院長先生の考えを理解して面接に来ることができるので、<strong>ミスマッチによる早期離職も予防することが可能です。</strong></p>
+</div></div></div>
+</section>
+
+<section class="pain-section" id="pain">
+<div class="pain-inner">
+<div class="sl fi">Pain Points</div>
+<h2 class="st fi">こんな採用の悩み、<em>心当たりはありませんか。</em></h2>
+<p class="pain-intro fi">求人を出しているのに採用がうまくいかない——その原因のほとんどは、HPで「このクリニックで働きたい」と思ってもらえていないことです。</p>
+<div class="pg">
+<div class="pi fi"><span class="pn">01</span><div class="pt"><strong>求人を出しても応募が来ない</strong>掲載費用はかかっているのに、応募数が少ない。あるいは全く来ない月がある。</div></div>
+<div class="pi fi fi-delay-1"><span class="pn">02</span><div class="pt"><strong>HPに採用専用のページがない、情報が少ない</strong>「採用情報」に給与と勤務時間しか書いていない。雰囲気が全く伝わっていない。</div></div>
+<div class="pi fi fi-delay-2"><span class="pn">03</span><div class="pt"><strong>面接に来てもお互いに「思っていた雰囲気と違う」</strong>求職者に必要な情報が不足したままなので、面接にきた後に断られる。また、病院がどんな人材を求めているかが伝わらず、欲しい人材がこない。</div></div>
+<div class="pi fi fi-delay-3"><span class="pn">04</span><div class="pt"><strong>採用できてもすぐ辞めてしまう</strong>「こんな職場だと思っていなかった」——ミスマッチによる早期離職が続いている。</div></div>
+<div class="pi fi"><span class="pn">05</span><div class="pt"><strong>近くのクリニックには応募が集まっている</strong>条件はほぼ同じなのに、あちらには応募が来る。何が違うのかわからない。</div></div>
+<div class="pi fi fi-delay-1"><span class="pn">06</span><div class="pt"><strong>求人広告費が毎月かさんでいる</strong>採用できないまま掲載を続け、広告費だけが積み重なっている。</div></div>
+</div></div>
+</section>
+
+<section class="sol-section" id="solution">
+<div class="sol-inner">
+<div class="sl fi sl-c">Our Solution</div>
+<h2 class="st st-c fi">nARKが提供する、<em>採用を変えるふたつの武器。</em></h2>
+<p class="sol-lead fi">求職者がHPを訪れた瞬間に「ここで働きたい」と思ってもらうために、<br>採用専用ページと採用動画のふたつをセットでご提供します。</p>
+<div class="sol-cards fi">
+<div class="sc">
+<div class="sc-head"><span class="sc-tag">Solution 01</span><div class="sc-tr"><h3>採用<em>専用ページ</em>制作</h3><span class="sc-icon">💻</span></div></div>
+<div class="sc-body"><p class="sc-desc">「採用情報」ページを、求職者の心を動かすページに整備します。<strong>求職者がHPを訪れた瞬間に「ここで働きたい」と思い、応募ボタンまで自然に導く導線</strong>を設計します。</p>
+<ul class="spl"><li>院長メッセージ・スタッフ紹介・職場環境を整理した採用専用ページ</li><li>求職者の「不安」を先回りして解消するコンテンツ設計</li><li>スマホでも見やすいレスポンシブデザイン</li><li>動画と連動した「見て・読んで・応募したくなる」導線</li><li>応募者からの問い合わせ・返信対応も代行可能</li></ul></div>
+</div>
+<div class="sc b">
+<div class="sc-head"><span class="sc-tag">Solution 02</span><div class="sc-tr"><h3>採用<em>動画</em>制作</h3><span class="sc-icon">🎬</span></div></div>
+<div class="sc-body"><p class="sc-desc">院長の人柄・スタッフの雰囲気・1日の仕事の流れを映像で届けます。動画は<strong>24時間・365日、あなたの代わりに採用活動を続ける「採用担当者」</strong>です。</p>
+<ul class="spl"><li>院長インタビュー・スタッフの声・院内紹介を組み合わせた構成</li><li>HP・求人サイト・Instagram・YouTubeで活用可能</li><li>一度作れば何年でも使い続けられる「採用の資産」</li><li>見た求職者が「ここで働きたい」と思って面接に来る</li></ul></div>
+</div></div></div>
+</section>
+
+<section class="tg-section" id="together">
+<div class="tg-inner">
+<div class="sl fi">Synergy</div>
+<h2 class="st fi">より強力な採用導線を設計したい方には、<em>採用ページと動画のセットがおすすめです。</em></h2>
+<p class="tg-lead fi">採用専用ページだけ・動画だけでも効果はあります。でも、ふたつが揃ったとき、求職者は「ここで働きたい」という確信を持って応募してきます。</p>
+<div class="tgflow fi">
+<div class="tfs"><span class="tfs-i">🔍</span><div class="tfs-l">求人サイトで発見</div><div class="tfs-s">クリニック名を検索してHPへ</div></div>
+<div class="tfa">&rsaquo;</div>
+<div class="tfs prod"><span class="tfs-i">💻</span><div class="tfs-l">採用専用ページを見る</div><div class="tfs-s">整理された情報で「良さそう」と感じる</div><span class="tfs-b">nARKが制作</span></div>
+<div class="tfa">&rsaquo;</div>
+<div class="tfs prod"><span class="tfs-i">🎬</span><div class="tfs-l">採用動画を視聴する</div><div class="tfs-s">院長の人柄・職場の雰囲気が伝わり「ここで働きたい」に変わる</div><span class="tfs-b">nARKが制作</span></div>
+<div class="tfa">&rsaquo;</div>
+<div class="tfs prod"><span class="tfs-i">✉️</span><div class="tfs-l">確信を持って応募</div><div class="tfs-s">すでにクリニックが好きな状態で面接へ</div><span class="tfs-b">nARKが対応も可能</span></div>
+</div></div>
+</section>
+
+<section class="str-section" id="strength">
+<div class="str-inner">
+<div class="sl fi">Why nARK</div>
+<h2 class="st fi">元看護師だから、<em>「医療スタッフが響く採用コンテンツ」を作れます。</em></h2>
+<p class="str-lead fi">医療スタッフが転職先を選ぶとき、何を見て何を感じて決断するのか——7年間の看護師経験が、その視点を動画制作と採用専用ページ設計に直結させます。</p>
+<div class="str-grid">
+<div class="si fi"><div class="si-h"><div class="si-b">1</div><h3>求職者が「本当に見たい情報」を知っている</h3></div><p>給与・休日だけでなく「院長の人柄」「スタッフ間の雰囲気」「どんな患者さんが多いか」——現場で転職を経験した立場から、響くポイントを押さえます。</p></div>
+<div class="si fi fi-delay-1"><div class="si-h"><div class="si-b">2</div><h3>「院長の想い」を求職者に届く言葉に変える</h3></div><p>「うちの良さをどう伝えればいいかわからない」という院長も多いです。ヒアリングを通じて院の強みを引き出し、求職者の心に刺さる言葉とビジュアルに変えます。</p></div>
+<div class="si fi fi-delay-2"><div class="si-h"><div class="si-b">3</div><h3>動画制作と採用専用ページ制作をワンストップで</h3></div><p>動画も採用専用ページも一人に任せられるため、メッセージの一貫性が保たれます。別々に発注するより、コストも制作期間も効率化できます。</p></div>
+<div class="si fi fi-delay-3"><div class="si-h"><div class="si-b">4</div><h3>患者向けブランディングと採用をセットで設計</h3></div><p>患者さんに選ばれるクリニックは、スタッフにも選ばれます。患者向けブランディング動画と採用動画を同じ日に撮影することで、費用も時間も効率化できます。</p></div>
+</div></div>
+</section>
+
+<section class="tgt-section" id="target">
+<div class="tgt-inner">
+<div class="sl fi">Best Match</div>
+<h2 class="st fi">こんなクリニックに<em>おすすめです</em></h2>
+<p class="tgt-intro fi">以下に当てはまる方は、採用専用ページと採用動画の効果を特に実感していただけます。</p>
+<div class="tgt-grid">
+<div class="tc fi"><div class="tc-rank"><span class="rbadge">Case 01</span></div><h3>新規開業する<em>クリニック</em></h3><p class="tc-r">開業と同時にスタッフの採用が必要。まだ知名度がない段階だからこそ、採用専用ページと動画で「どんなクリニックか」を先に発信することが重要です。</p><div class="tc-tags"><span class="tc-tag">開業準備中</span><span class="tc-tag">オープニングスタッフ</span></div></div>
+<div class="tc fi fi-delay-1"><div class="tc-rank"><span class="rbadge" style="background:var(--blue-deep)">Case 02</span></div><h3>求人を出しているのに<em>応募が少ない</em></h3><p class="tc-r">求人サイトに掲載しているのに応募が集まらない。HPに採用ページがない、あるいは情報が薄いことが原因かもしれません。</p><div class="tc-tags"><span class="tc-tag">応募数の改善</span><span class="tc-tag">HP整備</span></div></div>
+<div class="tc fi fi-delay-2"><div class="tc-rank"><span class="rbadge" style="background:var(--accent-light)">Case 03</span></div><h3>早期離職が多く<em>慢性的な人材不足</em></h3><p class="tc-r">採用できても「思っていた職場と違う」で辞められてしまう。入職前に院の雰囲気を正しく伝えることで、ミスマッチを防ぎ定着率を改善します。</p><div class="tc-tags"><span class="tc-tag">ミスマッチ防止</span><span class="tc-tag">定着率UP</span></div></div>
+<div class="tc fi fi-delay-3"><div class="tc-rank"><span class="rbadge" style="background:var(--blue-mid);color:var(--blue-text)">Case 04</span></div><h3>コストを抑えて<em>効率的に採用したい</em></h3><p class="tc-r">毎月の求人広告費を削減しつつ、応募の質を上げたい。一度の投資で長く使える採用専用ページと動画は、長期的にコストパフォーマンスの高い採用方法です。</p><div class="tc-tags"><span class="tc-tag">コスト削減</span><span class="tc-tag">長期活用</span></div></div>
+</div></div>
+</section>
+
+<section class="flow-section" id="flow">
+<div class="sl fi sl-c">Process</div>
+<h2 class="st st-c fi">制作の<em>流れ</em></h2>
+<div class="flow-inner">
+<div class="fi-item fi"><div class="fc">1</div><div class="fb"><h3>無料相談・ヒアリング</h3><p>採用の現状・どんな人材を採りたいか・現在のHPの課題をお聞きします。採用専用ページと動画、どちらから始めるべきかも一緒に考えます。</p><span class="fd">60分程度 / オンライン・訪問</span></div></div>
+<div class="fi-item fi fi-delay-1"><div class="fc">2</div><div class="fb"><h3>企画・構成のご提案</h3><p>採用ターゲット・活用場所・予算に合わせて、採用専用ページの設計と動画の内容をご提案します。セットプランと単体プランをご説明した上でご選択いただきます。</p><span class="fd">1〜2週間</span></div></div>
+<div class="fi-item fi fi-delay-2"><div class="fc">3</div><div class="fb"><h3>撮影・コンテンツ収集</h3><p>院内・院長インタビュー・スタッフへの取材など、診療の合間や休診日に合わせて撮影します。採用専用ページ用の写真も同日に対応できます。</p><span class="fd">半日〜1日</span></div></div>
+<div class="fi-item fi fi-delay-3"><div class="fc">4</div><div class="fb"><h3>採用専用ページ制作・動画編集</h3><p>採用専用ページの制作と動画の編集を並行して進めます。初稿をそれぞれご確認いただき、修正を経て完成させます。</p><span class="fd">3〜4週間</span></div></div>
+<div class="fi-item fi"><div class="fc">5</div><div class="fb"><h3>納品・掲載サポート</h3><p>採用専用ページの公開と動画データの納品をサポートします。求人サイトへの動画掲載・SNS活用など、採用チャネル全体の整備もアドバイスします。</p><span class="fd">納品後フォローあり</span></div></div>
+</div></section>
+
+<section class="faq-section" id="faq">
+<div class="sl fi sl-c">FAQ</div>
+<h2 class="st st-c fi">よくある<em>ご質問</em></h2>
+<div class="faq-inner">
+<div class="faq-item fi"><div class="faq-q"><span class="faq-qm">Q</span><span class="faq-qt">動画だけ、または採用専用ページだけでも依頼できますか？</span><span class="faq-tg">＋</span></div><div class="faq-a"><span class="faq-am">A</span><span class="faq-at">はい、どちらか単体でもご依頼いただけます。ただ、動画と採用専用ページをセットで整備すると「見て興味を持つ→読んで納得する→応募したくなる」という導線が完成します。まずは相談の中で優先順位を一緒に決めましょう。</span></div></div>
+<div class="faq-item fi fi-delay-1"><div class="faq-q"><span class="faq-qm">Q</span><span class="faq-qt">費用の目安を教えてください。</span><span class="faq-tg">＋</span></div><div class="faq-a"><span class="faq-am">A</span><span class="faq-at">採用動画1本（2〜3分）で10万円〜、採用専用ページ制作で7万円〜が目安です。セットプランではお得にご提供できます。まずは無料相談でご予算とご要望をお聞きした上でお見積もりします。</span></div></div>
+<div class="faq-item fi fi-delay-2"><div class="faq-q"><span class="faq-qm">Q</span><span class="faq-qt">既存のHPに採用ページを追加することはできますか？</span><span class="faq-tg">＋</span></div><div class="faq-a"><span class="faq-am">A</span><span class="faq-at">はい、可能です。既存サイトのデザインに合わせた採用ページを新規で制作し、追加する形で対応します。今のHPサイトの仕組みによって対応方法が変わりますので、相談時にお知らせください。</span></div></div>
+<div class="faq-item fi"><div class="faq-q"><span class="faq-qm">Q</span><span class="faq-qt">スタッフが撮影に協力してくれるか不安です。</span><span class="faq-tg">＋</span></div><div class="faq-a"><span class="faq-am">A</span><span class="faq-at">顔出しNGのスタッフは後ろ姿や手元の映像にする・ナレーションのみにするなど、無理なく参加できる方法があります。実際、多くのスタッフの方が撮影後に「楽しかった」「自分のクリニックが好きになった」とおっしゃいます。</span></div></div>
+<div class="faq-item fi fi-delay-1"><div class="faq-q"><span class="faq-qm">Q</span><span class="faq-qt">ブランディング動画と採用動画は同時に作れますか？</span><span class="faq-tg">＋</span></div><div class="faq-a"><span class="faq-am">A</span><span class="faq-at">はい、同じ日に撮影することで費用・スタッフの拘束時間ともに効率化できます。患者向けブランディング動画・採用動画・採用専用ページをまとめてご依頼いただくと、クリニック全体の「伝える力」を一気に整備できます。</span></div></div>
+<div class="faq-item fi fi-delay-2"><div class="faq-q"><span class="faq-qm">Q</span><span class="faq-qt">熊本市外でも対応できますか？</span><span class="faq-tg">＋</span></div><div class="faq-a"><span class="faq-am">A</span><span class="faq-at">熊本県内全域に対応しています。また全国に医療動画制作チームがおりますので、県外の方もお気軽にご相談ください。まずはオンラインでのご相談から始められます。</span></div></div>
+</div></section>
+
+<section class="cta-section" id="contact">
+<div class="cta-tag">Free Consultation</div>
+<h2>求職者が「ここで働きたい」と<br><em>思える採用専用ページを、一緒に作りましょう。</em></h2>
+<p class="cta-desc">採用専用ページ・採用動画、どちらか一方でも、セットでも。<br>「今どんな状況か話したい」という段階からでも歓迎です。<br>熊本市内・合志・菊陽エリアは優先対応、遠方はオンラインでご対応します。</p>
+<div class="cta-fb">相談料・見積もり無料</div>
+<div class="cta-btns"><a href="https://docs.google.com/forms/d/e/1FAIpQLSf5nXRdIzAzz2RkhZmj6hGNYqjjNBr4CNydVQy1gK9skGg3zQ/viewform?usp=header" target="_blank" class="cta-bm">フォームで相談する</a><a href="mailto:nark.visual.media@gmail.com" class="cta-bs">メールで問い合わせる</a></div>
+<p class="cta-note">通常3営業日以内にご返信します</p>
+</section>
+
+<footer>
+<div class="fm"><div class="fl">n<em>ARK</em></div><div class="ftag">医療 × 地域密着 × 誠実な対応<br>"信頼で選ばれる"動画制作<br><br>Office：熊本市北区梶尾町</div></div>
+<div class="fbot"><div class="fcopy">&copy;nARK visual media. All rights reserved.</div></div>
+</footer>
+
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:0.1});document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
+document.querySelectorAll('.faq-item').forEach(i=>{i.querySelector('.faq-q').addEventListener('click',()=>{const a=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(j=>{j.classList.remove('active');j.querySelector('.faq-a').classList.remove('open')});if(!a){i.classList.add('active');i.querySelector('.faq-a').classList.add('open')}})});
+</script>
+</body>
+</html>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{--accent:#5a9bb8;--blue-text:#1e3d4f;--blue-pale:#f0f8fc;--gray-mid:#dddad4;--white:#fff}
 body{font-family:'Noto Sans JP',sans-serif;color:var(--blue-text);line-height:1.8;font-weight:300;font-size:14px}
