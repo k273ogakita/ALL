@@ -281,7 +281,9 @@
   .why-message-footer { margin-top: 1.8rem; display: flex; align-items: center; gap: 1rem; }
 
   .why-photo {
-    width: 60px; height: 60px; border-radius: 50%; overflow: hidden;
+    width: 180px;
+height: 120px;
+border-radius: 4px;  overflow: hidden;
     border: 2px solid rgba(232,98,26,0.3); background: var(--border);
     flex-shrink: 0; display: flex; align-items: center; justify-content: center;
     font-family: 'Noto Sans JP', sans-serif;
@@ -950,14 +952,15 @@
 </section>
 
 <footer>
-  <a href="#" class="logo">nARK</a>
-  <div>
-    <a href="/privacy.html">プライバシーポリシー</a> 
-    <a href="/policy.html">サイトポリシー</a> 
-     <a href="medical.html">医療関係者の方はこちら</a>
+  <a href="#" class="logo">n<span>A</span>RK</a>
+  <div style="display:flex; gap:2rem; align-items:center; flex-wrap:wrap;">
+    <a href="privacy.html" class="footer-link">プライバシーポリシー</a>
+    <a href="policy.html" class="footer-link">サイトポリシー</a>
+    <a href="medical.html" class="footer-link">医療関係者の方はこちら</a>
   </div>
   <p class="footer-copy">© nARK. All rights reserved.</p>
 </footer>
+  
 
 <div class="fixed-cta" id="fixedCta">
   <a href="#contact">
