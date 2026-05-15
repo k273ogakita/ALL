@@ -1,48 +1,828 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>イベント・講演会記録プラン | nARK</title>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet"/>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>イベント・講演会 記録・広報プラン | nARK visual media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--accent:#5a9bb8;--blue-text:#1e3d4f;--blue-pale:#f0f8fc;--gray-mid:#dddad4;--white:#fff}
-body{font-family:'Noto Sans JP',sans-serif;color:var(--blue-text);line-height:1.8;font-weight:300;font-size:14px}
-a{text-decoration:none;color:inherit}
-.page-header{background:var(--blue-pale);padding:60px 40px 48px;border-bottom:1px solid var(--gray-mid)}
-.back-link{font-size:11px;letter-spacing:.1em;color:var(--accent);margin-bottom:24px;display:inline-block}
-.back-link:hover{opacity:.7}
-.plan-num{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.25em;color:var(--accent);margin-bottom:8px}
-.page-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,40px);font-weight:300;letter-spacing:.04em;margin-bottom:8px}
-.plan-en{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);opacity:.7}
-.content{max-width:800px;margin:0 auto;padding:60px 40px}
-.content p{font-size:14px;line-height:2.2;margin-bottom:20px;color:#444}
-.cta{text-align:center;padding:60px 40px;background:var(--blue-pale)}
-.cta p{margin-bottom:20px;font-size:13px;color:var(--blue-text);opacity:.75}
-.cta-btn{display:inline-block;border:1px solid var(--accent);padding:14px 44px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--blue-text);transition:background .3s,color .3s}
-.cta-btn:hover{background:var(--accent);color:var(--white)}
+  :root {
+    --navy: #1B2A3B;
+    --navy-mid: #243447;
+    --navy-light: #2E4060;
+    --teal: #3A7CA5;
+    --teal-light: #5B9CC4;
+    --teal-pale: #EAF3F9;
+    --accent: #C8A96E;
+    --accent-light: #DFC99A;
+    --cream: #F8F5F0;
+    --white: #FFFFFF;
+    --text: #1B2A3B;
+    --mid: #5A6A7A;
+    --light: #9AAABB;
+    --border: #D8E4EC;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Serif JP', serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.9;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 1rem 5%;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem; font-weight: 600; letter-spacing: 0.1em;
+    color: var(--text); text-decoration: none;
+  }
+  .nav-logo em { color: var(--accent); font-style: normal; }
+
+  .nav-links { display: flex; gap: 1.8rem; list-style: none; align-items: center; }
+  .nav-links a {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.75rem; letter-spacing: 0.12em;
+    color: var(--mid); text-decoration: none; transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--teal); }
+
+  .nav-back {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.72rem; letter-spacing: 0.1em;
+    color: var(--light); text-decoration: none;
+    display: flex; align-items: center; gap: 0.4rem; transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--teal); }
+
+  /* HERO */
+  #hero {
+    min-height: 100vh;
+    background: var(--cream);
+    display: flex; align-items: center;
+    padding: 8rem 5% 5rem;
+    position: relative; overflow: hidden;
+  }
+
+  .hero-deco {
+    position: absolute;
+    right: -3%; top: 50%; transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(8rem, 16vw, 18rem);
+    font-weight: 600;
+    color: rgba(58,124,165,0.06);
+    letter-spacing: -0.04em;
+    pointer-events: none; user-select: none; line-height: 1;
+  }
+
+  .hero-content { max-width: 720px; position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    display: flex; align-items: center; gap: 1rem; margin-bottom: 2rem;
+  }
+  .hero-eyebrow-line { width: 40px; height: 1px; background: var(--teal); }
+  .hero-eyebrow-text {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.68rem; letter-spacing: 0.3em; color: var(--teal);
+    text-transform: uppercase;
+  }
+
+  .hero-plan-badge {
+    display: inline-block;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.7rem; letter-spacing: 0.15em;
+    background: rgba(58,124,165,0.08);
+    border: 1px solid rgba(58,124,165,0.25);
+    color: var(--teal);
+    padding: 0.3rem 1rem; border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 3.2rem);
+    font-weight: 700; line-height: 1.4; letter-spacing: 0.04em;
+    color: var(--text); margin-bottom: 1rem;
+  }
+  .hero-title em { color: var(--teal); font-style: normal; }
+
+  .hero-sub {
+    font-size: clamp(0.88rem, 1.6vw, 1rem);
+    color: var(--mid); font-weight: 300;
+    letter-spacing: 0.04em; margin-bottom: 2.5rem; line-height: 2.2;
+    max-width: 540px;
+  }
+
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    background: var(--teal); color: var(--white);
+    padding: 0.9rem 2rem; text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.82rem; letter-spacing: 0.1em; border-radius: 2px;
+    transition: background 0.2s, transform 0.15s; display: inline-block; font-weight: 500;
+    border: 1px solid var(--teal);
+  }
+  .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
+
+  .btn-outline {
+    border: 1px solid var(--navy); color: var(--navy);
+    padding: 0.9rem 2rem; text-decoration: none;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.82rem; letter-spacing: 0.1em; border-radius: 2px;
+    transition: border-color 0.2s, color 0.2s; display: inline-block; font-weight: 400;
+  }
+  .btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+
+  .hero-scroll {
+    position: absolute; bottom: 2.5rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: var(--light);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.62rem; letter-spacing: 0.2em;
+  }
+  .scroll-line {
+    width: 1px; height: 40px; background: var(--light);
+    animation: scrollDown 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollDown {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* SECTION COMMONS */
+  .section-label {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.65rem; letter-spacing: 0.3em; color: var(--teal);
+    text-transform: uppercase; margin-bottom: 0.8rem; display: block;
+  }
+  .section-title {
+    font-size: clamp(1.3rem, 2.8vw, 2rem);
+    font-weight: 700; letter-spacing: 0.04em; margin-bottom: 1rem; color: var(--text);
+  }
+  .section-title em { color: var(--teal); font-style: normal; }
+  .section-lead {
+    font-size: 0.88rem; color: var(--mid);
+    max-width: 560px; line-height: 2.2; margin-bottom: 3.5rem;
+  }
+
+  /* FOR WHOM */
+  #forwho { padding: 6rem 5%; background: var(--white); }
+
+  .forwho-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;
+  }
+
+  .forwho-card {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-top: 3px solid var(--teal);
+    padding: 2rem 1.8rem; border-radius: 2px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+  .forwho-card:hover { box-shadow: 0 6px 24px rgba(58,124,165,0.1); transform: translateY(-2px); }
+
+  .forwho-icon { font-size: 1.6rem; margin-bottom: 1rem; display: block; }
+  .forwho-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.6rem; letter-spacing: 0.03em; }
+  .forwho-desc { font-size: 0.8rem; color: var(--mid); line-height: 2; }
+
+  /* PAIN */
+  #pain { padding: 6rem 5%; background: var(--navy); position: relative; overflow: hidden; }
+  #pain .section-label { color: var(--teal-light); }
+  #pain .section-title { color: var(--white); }
+  #pain .section-lead { color: rgba(255,255,255,0.5); }
+
+  .pain-bg {
+    position: absolute; right: -5%; top: 50%; transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(6rem, 14vw, 16rem);
+    font-weight: 600; color: rgba(255,255,255,0.03);
+    line-height: 1; pointer-events: none; user-select: none;
+  }
+
+  .pain-list {
+    display: flex; flex-direction: column; max-width: 680px; position: relative; z-index: 1;
+  }
+
+  .pain-item {
+    display: flex; gap: 1.5rem; align-items: flex-start;
+    padding: 1.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .pain-item:first-child { border-top: 1px solid rgba(255,255,255,0.07); }
+
+  .pain-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem; color: var(--teal-light); font-weight: 600;
+    line-height: 1; flex-shrink: 0; padding-top: 0.2rem; opacity: 0.7;
+  }
+  .pain-text { font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 2; }
+  .pain-text strong { color: var(--teal-light); font-weight: 500; }
+
+  /* WHAT WE DO */
+  #whatwedo { padding: 6rem 5%; background: var(--cream); }
+
+  .service-cards {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2px;
+    background: var(--border); border: 1px solid var(--border); border-radius: 4px; overflow: hidden;
+    margin-bottom: 2rem;
+  }
+
+  .service-card {
+    background: var(--white); padding: 2.4rem 2rem;
+    display: flex; flex-direction: column; gap: 1rem; transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--teal-pale); }
+
+  .service-card-head { display: flex; align-items: flex-start; gap: 1rem; }
+
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem; color: rgba(58,124,165,0.2); font-weight: 600; line-height: 1; flex-shrink: 0;
+  }
+
+  .service-icon-wrap {
+    width: 44px; height: 44px; background: var(--teal-pale);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 1.2rem;
+  }
+
+  .service-name { font-size: 1rem; font-weight: 700; letter-spacing: 0.03em; color: var(--text); }
+  .service-desc { font-size: 0.81rem; color: var(--mid); line-height: 2; }
+
+  .service-tags {
+    display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: auto; padding-top: 0.8rem;
+    border-top: 1px solid var(--border);
+  }
+  .service-tag {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.65rem; padding: 0.2rem 0.6rem;
+    background: var(--teal-pale); color: var(--teal);
+    border-radius: 2px; letter-spacing: 0.05em;
+  }
+
+  /* STRENGTH */
+  #strength { padding: 6rem 5%; background: var(--white); }
+
+  .strength-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+
+  .strength-list { display: flex; flex-direction: column; }
+
+  .strength-item {
+    padding: 1.8rem 0; border-bottom: 1px solid var(--border);
+    display: flex; gap: 1.5rem; align-items: flex-start;
+  }
+  .strength-item:first-child { border-top: 1px solid var(--border); }
+
+  .strength-icon {
+    width: 44px; height: 44px; background: var(--teal-pale);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; font-size: 1rem;
+  }
+
+  .strength-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: 0.03em; }
+  .strength-text { font-size: 0.8rem; color: var(--mid); line-height: 2; }
+
+  .strength-message {
+    background: var(--navy); padding: 3rem; border-radius: 2px; position: relative; overflow: hidden;
+  }
+  .strength-message::before {
+    content: '\201C'; font-family: 'Cormorant Garamond', serif;
+    font-size: 8rem; color: rgba(255,255,255,0.05);
+    position: absolute; top: 0; left: 1rem; line-height: 1;
+  }
+  .strength-message-text {
+    font-size: 0.88rem; color: rgba(255,255,255,0.8); line-height: 2.4;
+    position: relative; z-index: 1; margin-bottom: 2rem;
+  }
+  .strength-message-sign {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 0.78rem; color: var(--accent); letter-spacing: 0.08em;
+  }
+  .strength-message-sign small {
+    display: block; color: rgba(255,255,255,0.3);
+    font-size: 0.65rem; margin-top: 0.2rem; letter-spacing: 0.12em;
+  }
+
+  /* FLOW */
+  #flow { padding: 6rem 5%; background: var(--cream); }
+
+  .flow-steps {
+    display: flex; flex-direction: column; max-width: 680px; margin: 0 auto; position: relative;
+  }
+  .flow-steps::before {
+    content: ''; position: absolute; left: 24px; top: 0; bottom: 0;
+    width: 1px; background: var(--border);
+  }
+
+  .flow-step { display: flex; gap: 2rem; align-items: flex-start; padding: 2rem 0; position: relative; }
+
+  .flow-circle {
+    width: 48px; height: 48px; border-radius: 50%; background: var(--white);
+    border: 2px solid var(--border); display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0; position: relative; z-index: 1; transition: border-color 0.2s, background 0.2s;
+  }
+  .flow-step:hover .flow-circle { background: var(--teal); border-color: var(--teal); }
+  .flow-circle span {
+    font-family: 'Cormorant Garamond', serif; font-size: 1.2rem; color: var(--mid);
+    font-weight: 600; transition: color 0.2s;
+  }
+  .flow-step:hover .flow-circle span { color: var(--white); }
+
+  .flow-body { padding-top: 0.6rem; }
+  .flow-title { font-size: 0.95rem; font-weight: 700; margin-bottom: 0.4rem; letter-spacing: 0.03em; }
+  .flow-desc { font-size: 0.8rem; color: var(--mid); line-height: 2; }
+
+  /* FAQ */
+  #faq { padding: 6rem 5%; background: var(--white); }
+
+  .faq-list { max-width: 720px; margin: 0 auto; }
+  .faq-item { border-bottom: 1px solid var(--border); }
+
+  .faq-q {
+    padding: 1.5rem 0; font-size: 0.88rem; font-weight: 500; color: var(--text);
+    cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+    letter-spacing: 0.03em; user-select: none;
+  }
+  .faq-arrow { width: 20px; height: 20px; flex-shrink: 0; margin-left: 1rem; transition: transform 0.25s; }
+  .faq-item.open .faq-arrow { transform: rotate(45deg); }
+  .faq-arrow svg { width: 20px; height: 20px; stroke: var(--teal); fill: none; }
+
+  .faq-a {
+    font-size: 0.8rem; color: var(--mid); line-height: 2.2;
+    overflow: hidden; max-height: 0; transition: max-height 0.35s ease, padding-bottom 0.25s; padding-bottom: 0;
+  }
+  .faq-item.open .faq-a { max-height: 320px; padding-bottom: 1.5rem; }
+
+  /* CONTACT */
+  #contact { padding: 7rem 5%; background: var(--navy); position: relative; overflow: hidden; }
+
+  .contact-bg {
+    position: absolute; left: -2%; bottom: -5%;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(6rem, 14vw, 16rem); font-weight: 600;
+    color: rgba(255,255,255,0.03); line-height: 1; pointer-events: none; user-select: none;
+  }
+
+  .contact-inner { max-width: 680px; position: relative; z-index: 1; }
+  #contact .section-label { color: var(--teal-light); }
+  #contact .section-title { color: var(--white); }
+  .contact-lead { font-size: 0.9rem; color: rgba(255,255,255,0.5); line-height: 2.3; margin-bottom: 3rem; }
+
+  .contact-options { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-bottom: 2rem; }
+
+  .contact-btn {
+    display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.8rem;
+    padding: 2.2rem 1.5rem; border-radius: 2px; text-decoration: none;
+    transition: transform 0.15s; text-align: center;
+  }
+  .contact-btn:hover { transform: translateY(-2px); }
+
+  .contact-btn-mail { background: var(--teal); border: 1px solid var(--teal); color: var(--white); }
+  .contact-btn-mail:hover { background: var(--teal-light); border-color: var(--teal-light); }
+
+  .contact-btn-form {
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.15); color: rgba(255,255,255,0.85);
+  }
+  .contact-btn-form:hover { background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.3); }
+
+  .contact-btn-icon {
+    width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  }
+  .contact-btn-mail .contact-btn-icon { background: rgba(255,255,255,0.15); }
+  .contact-btn-form .contact-btn-icon { background: rgba(255,255,255,0.08); }
+  .contact-btn-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+  .contact-btn-label { font-family: 'Noto Sans JP', sans-serif; font-size: 0.85rem; font-weight: 500; letter-spacing: 0.08em; }
+  .contact-btn-sub { font-family: 'Noto Sans JP', sans-serif; font-size: 0.7rem; opacity: 0.6; letter-spacing: 0.05em; }
+  .contact-note { font-family: 'Noto Sans JP', sans-serif; font-size: 0.75rem; color: rgba(255,255,255,0.25); letter-spacing: 0.05em; line-height: 2; }
+
+  /* FOOTER */
+  footer {
+    background: #131F2B; padding: 2rem 5%;
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.06);
+  }
+
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem; font-weight: 600; letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.5); text-decoration: none;
+  }
+  .footer-logo em { color: var(--accent); font-style: normal; }
+
+  .footer-copy { font-family: 'Noto Sans JP', sans-serif; font-size: 0.68rem; color: rgba(255,255,255,0.18); letter-spacing: 0.08em; }
+
+  /* ANIMATIONS */
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .strength-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-options { grid-template-columns: 1fr; }
+    footer { flex-direction: column; align-items: flex-start; }
+    .nav-links { display: none; }
+  }
 </style>
 </head>
 <body>
 
-<div class="page-header">
-  <a href="../index.html" class="back-link">← TOPに戻る</a>
-  <div class="plan-num">03</div>
-  <h1>イベント・講演会「記録・広報動画プラン」</h1>
-  <p class="plan-en">Event / Conference Plan</p>
-</div>
+<nav>
+  <a href="https://nark-movie.com/../medical.html" class="nav-logo">n<em>A</em>RK</a>
+  <ul class="nav-links">
+    <li><a href="#whatwedo">サービス内容</a></li>
+    <li><a href="#strength">強み</a></li>
+    <li><a href="#flow">制作の流れ</a></li>
+    <li><a href="#faq">よくある質問</a></li>
+  </ul>
+  <a href="https://nark-movie.com/../medical.html" class="nav-back">← サービス一覧へ戻る</a>
+</nav>
 
-<div class="content">
-  <p>地域・行政イベント、講演会、勉強会の記録動画を制作します。</p>
-  <p>アーカイブ用としても、SNS・WEB広報用としても使えるよう、複数カメラで臨場感を演出。当日の熱量をそのまま映像に残します。</p>
-  <p>「記録として残したい」「次回の集客に使いたい」どちらのニーズにも対応します。</p>
-</div>
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-deco">event</div>
+  <div class="hero-content fade-in">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">Event &amp; Conference Plan</span>
+    </div>
+    <div class="hero-plan-badge">医療向けサービス / プラン 03</div>
+    <h1 class="hero-title">
+      地域向けイベント・学会・講演会・<br>院内外行事を、しっかり<br>
+      <em>記録・発信コンテンツに。</em>
+    </h1>
+    <p class="hero-sub">
+      医院の活動や、先生の専門性・ご活躍を映像で記録し、届ける。<br>
+      アーカイブとしてだけでなく、院外への強力なPRツールとして活用できます。
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn-primary">見積もりを依頼する</a>
+      <a href="#whatwedo" class="btn-outline">サービス詳細を見る</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>scroll</span><div class="scroll-line"></div></div>
+</section>
 
-<div class="cta">
-  <p>ご相談は無料です。お気軽にお問い合わせください。</p>
-  <a href="../index.html#contact" class="cta-btn">Contact Us</a>
-</div>
+<!-- FOR WHOM -->
+<section id="forwho">
+  <div class="fade-in">
+    <span class="section-label">こんな医院におすすめです</span>
+    <h2 class="section-title">活動を映像で<em>残したい方へ</em></h2>
+    <p class="section-lead">
+      撮っただけ、で終わらせない。撮った映像を記録・PRに活かすための設計が可能です。
+    </p>
+  </div>
+  <div class="forwho-grid fade-in">
+    <div class="forwho-card">
+      <span class="forwho-icon">🏥</span>
+      <p class="forwho-title">院内・外へのPR、活動報告をしたい</p>
+      <p class="forwho-desc">地域での認知度を高めたい、SNSやHPでの発信に活用したい。イベントをコンテンツ化して継続的に活用できます。</p>
+    </div>
+    <div class="forwho-card">
+      <span class="forwho-icon">🎤</span>
+      <p class="forwho-title">地域イベント・市民向けの啓発活動をする</p>
+      <p class="forwho-desc">市民向け健康講座や地域連携イベントを開催している方。当日の記録と広報用ダイジェスト動画をセットで制作できます。</p>
+    </div>
+    <div class="forwho-card">
+      <span class="forwho-icon">🎓</span>
+      <p class="forwho-title">学会・講演会・研究会で発表する</p>
+      <p class="forwho-desc">学会発表や院内勉強会を映像で残したい。発表内容をアーカイブ化し、後から共有できる形に整えます。</p>
+    </div>
+    <div class="forwho-card">
+      <span class="forwho-icon">📱</span>
+      <p class="forwho-title">SNS・HPでの情報発信に力を入れたい方</p>
+      <p class="forwho-desc">イベントの映像をSNSやYouTubeに投稿したい。SNS向けの縦型ショート動画への切り出しにも対応しています。</p>
+    </div>
+  </div>
+</section>
 
+<!-- PAIN -->
+<section id="pain">
+  <div class="pain-bg">PR</div>
+  <div class="fade-in">
+    <span class="section-label">こんな悩みはありませんか</span>
+    <h2 class="section-title" style="color:var(--white);">記録はしているのに、<em style="color:var(--teal-light);">活かせていない。</em></h2>
+    <p class="section-lead">せっかくのイベントや講演会が、その場限りで終わっていませんか。</p>
+  </div>
+  <div class="pain-list fade-in">
+    <div class="pain-item">
+      <span class="pain-num">01</span>
+      <p class="pain-text">スタッフがスマホで撮影しているが、<strong>画質が悪かったり、音が聞き取りづらかったりして使えない</strong></p>
+    </div>
+    <div class="pain-item">
+      <span class="pain-num">02</span>
+      <p class="pain-text">記録動画はあるが<strong>長すぎて誰も見ない</strong>、SNSには使えない</p>
+    </div>
+    <div class="pain-item">
+      <span class="pain-num">03</span>
+      <p class="pain-text">イベントを開催しているのに、<strong>院外への発信につながっていない</strong></p>
+    </div>
+    <div class="pain-item">
+      <span class="pain-num">04</span>
+      <p class="pain-text">先生の<strong>専門性や熱量が伝わる動画を作りたい</strong>が、どこに頼めばいいかわからない</p>
+    </div>
+    <div class="pain-item">
+      <span class="pain-num">05</span>
+      <p class="pain-text">講演会や学会発表時に<strong>動画があるともっと伝わると思う時がある</strong></p>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE DO -->
+<section id="whatwedo">
+  <div class="fade-in">
+    <span class="section-label">サービス内容</span>
+    <h2 class="section-title">記録から<em>発信</em>まで、ワンストップで。</h2>
+    <p class="section-lead">撮影・編集だけでなく、動画をどう活用するかまで一緒に設計します。</p>
+  </div>
+  <div class="service-cards fade-in">
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <span class="service-num">01</span>
+        <div class="service-icon-wrap">🎬</div>
+      </div>
+      <p class="service-name">講演会・勉強会・学会発表の記録動画</p>
+      <p class="service-desc">
+        院内勉強会、市民向け健康講座、医療連携セミナーなどをプロ機材で撮影・編集。
+        アーカイブ動画として納品します。
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">院内勉強会</span>
+        <span class="service-tag">市民講座</span>
+        <span class="service-tag">医療連携セミナー</span>
+        <span class="service-tag">アーカイブ</span>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <span class="service-num">02</span>
+        <div class="service-icon-wrap">🎞️</div>
+      </div>
+      <p class="service-name">地域向けイベントの記録・広報動画</p>
+      <p class="service-desc">
+        地域で開催するイベントの当日を魅力的なイベントとして記録。
+        SNSやHPへの掲載を想定した、次回開催の告知にも使えるダイジェスト動画も制作できます。
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">地域イベント</span>
+        <span class="service-tag">ダイジェスト</span>
+        <span class="service-tag">広報用</span>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <span class="service-num">03</span>
+        <div class="service-icon-wrap">🎓</div>
+      </div>
+      <p class="service-name">学会・研究会発表用の動画</p>
+      <p class="service-desc">
+        先生のお話・発表をより伝わりやすく、印象に残る映像として作成致します。
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">学会発表</span>
+        <span class="service-tag">研究会</span>
+        <span class="service-tag">発表用動画素材</span>
+      </div>
+    </div>
+
+    <div class="service-card">
+      <div class="service-card-head">
+        <span class="service-num">04</span>
+        <div class="service-icon-wrap">📱</div>
+      </div>
+      <p class="service-name">SNS向けショート動画への切り出し</p>
+      <p class="service-desc">
+        撮影した映像から、InstagramやYouTubeショートに使えるショート動画を切り出し。
+        縦型・横型どちらにも対応し、発信できるコンテンツとして整えます。
+      </p>
+      <div class="service-tags">
+        <span class="service-tag">Instagram</span>
+        <span class="service-tag">YouTube</span>
+        <span class="service-tag">縦型・横型対応</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STRENGTH -->
+<section id="strength">
+  <div class="fade-in" style="margin-bottom:4rem;">
+    <span class="section-label">nARKの強み</span>
+    <h2 class="section-title">元看護師だから、<em>医療の文脈を理解して正確に届けられる。</em></h2>
+  </div>
+  <div class="strength-grid">
+    <div class="strength-list fade-in">
+      <div class="strength-item">
+        <div class="strength-icon">🏥</div>
+        <div>
+          <p class="strength-title">医療現場の知識があるから、内容を正しく理解して編集できる</p>
+          <p class="strength-text">専門用語や医療の文脈を理解した上で編集するため、内容がブレません。一般の制作会社では難しい、医療に特化した映像表現が可能です。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-icon">🎯</div>
+        <div>
+          <p class="strength-title">「記録」で終わらせない発信設計</p>
+          <p class="strength-text">どのSNSに、どんな形で、どのタイミングで使うか。撮影前から活用方法を一緒に考え、使えるコンテンツを作ります。</p>
+        </div>
+      </div>
+      <div class="strength-item">
+        <div class="strength-icon">📹</div>
+        <div>
+          <p class="strength-title">複数カメラで臨場感を演出</p>
+          <p class="strength-text">講演会やイベントの熱量をそのまま映像に残すために、複数カメラでの撮影に対応。発表者と会場の雰囲気を両方収めます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="strength-message fade-in">
+      <p class="strength-message-text">
+        私は看護師としての経験もありますが、実は腎臓移植を受けている患者でもあります。<br><br>
+        その両方を体験しているからこそ、医療を「正しく伝える」だけでなく、受け取る人にとって「わかりやすく、安心できる形」にすることを大切にしています。<br><br>
+        医療を提供する側の視点、患者さんの視点、双方の視点を活かしながら、目的や場面に応じた動画制作を行っています。
+      </p>
+      <p class="strength-message-sign">
+        緒方 和奈
+        <small>nARK / 元看護師・映像クリエイター</small>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- FLOW -->
+<section id="flow">
+  <div class="fade-in">
+    <span class="section-label">制作の流れ</span>
+    <h2 class="section-title">ご相談から<em>納品まで</em></h2>
+    <p class="section-lead">イベント・講演会の日程が決まったら、まずご相談ください。</p>
+  </div>
+  <div class="flow-steps fade-in">
+    <div class="flow-step">
+      <div class="flow-circle"><span>1</span></div>
+      <div class="flow-body">
+        <p class="flow-title">無料相談・ヒアリング</p>
+        <p class="flow-desc">イベントの概要・日程・ご要望をお聞きします。どんな映像にしたいか、どう活用したいかから一緒に整理します。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-circle"><span>2</span></div>
+      <div class="flow-body">
+        <p class="flow-title">撮影プランのご提案・お見積り</p>
+        <p class="flow-desc">カメラ台数・撮影範囲・納品物の種類などをご提案し、お見積りをお出しします。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-circle"><span>3</span></div>
+      <div class="flow-body">
+        <p class="flow-title">当日撮影</p>
+        <p class="flow-desc">イベント・講演会当日に撮影します。進行の妨げにならないよう、目立たず丁寧に動きます。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-circle"><span>4</span></div>
+      <div class="flow-body">
+        <p class="flow-title">編集・確認</p>
+        <p class="flow-desc">撮影素材を編集し、仮納品でご確認いただきます。ご要望に応じて修正対応します。</p>
+      </div>
+    </div>
+    <div class="flow-step">
+      <div class="flow-circle"><span>5</span></div>
+      <div class="flow-body">
+        <p class="flow-title">納品・活用サポート</p>
+        <p class="flow-desc">データを納品します。SNSへのアップロード方法や活用方法についてもご相談いただけます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq">
+  <div class="fade-in">
+    <span class="section-label">よくある質問</span>
+    <h2 class="section-title">はじめての方へ</h2>
+    <p class="section-lead">ご不安な点はお気軽にご相談ください。</p>
+  </div>
+  <div class="faq-list fade-in">
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        イベントの規模はどのくらいから対応できますか？
+        <span class="faq-arrow"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </div>
+      <div class="faq-a">
+        院内の少人数勉強会から、大きなホールでの講演会まで対応しています。まずはお気軽にご相談ください。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        納品までどのくらいかかりますか？
+        <span class="faq-arrow"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </div>
+      <div class="faq-a">
+        内容によりますが、撮影から2〜3週間を目安にしています。SNS用のショート動画を先に納品するなど、優先順位に応じた対応も可能ですのでご相談ください。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        学会発表のスライドも一緒に映像に入れられますか？
+        <span class="faq-arrow"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </div>
+      <div class="faq-a">
+        可能です。スライドのデータをいただくか、スクリーンを撮影する形で、発表者とスライドを組み合わせた見やすい映像に仕上げます。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        SNS用の縦型動画にも対応していますか？
+        <span class="faq-arrow"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </div>
+      <div class="faq-a">
+        はい、対応しています。InstagramリールやYouTubeショート向けの縦型動画への切り出しも可能です。活用したいSNSに合わせてご相談ください。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        熊本県外のイベントにも対応していますか？
+        <span class="faq-arrow"><svg viewBox="0 0 24 24" stroke-width="1.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>
+      </div>
+      <div class="faq-a">
+        場所によっては対応可能なことがあります。一度ご相談ください。
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-bg">nARK</div>
+  <div class="contact-inner">
+    <span class="section-label">お問い合わせ</span>
+    <h2 class="section-title" style="color:var(--white); margin-bottom:1rem;">まずはご相談ください</h2>
+    <p class="contact-lead">
+      ご相談は無料です。イベントの日程が決まっていなくても大丈夫です。<br>
+      メールまたは見積もりフォームよりお気軽にご連絡ください。
+    </p>
+    <div class="contact-options">
+      <a href="mailto:nark.visual.media@gmail.com" class="contact-btn contact-btn-mail">
+        <div class="contact-btn-icon">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <span class="contact-btn-label">メールで問い合わせる</span>
+        <span class="contact-btn-sub">ご質問などお気軽にどうぞ</span>
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSf5nXRdIzAzz2RkhZmj6hGNYqjjNBr4CNydVQy1gK9skGg3zQ/viewform?usp=header" target="_blank" rel="noopener" class="contact-btn contact-btn-form">
+        <div class="contact-btn-icon">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14,2 14,8 20,8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <span class="contact-btn-label">見積もりを依頼する</span>
+        <span class="contact-btn-sub">こちらからご希望を入力してください</span>
+      </a>
+    </div>
+    <p class="contact-note">通常、３営業日以内にご連絡させていただきます。</p>
+  </div>
+</section>
+
+<footer>
+  <a href="https://nark-movie.com/../medical.html" class="footer-logo">n<em>A</em>RK</a>
+  <p class="footer-copy">© nARK visual media. All rights reserved.</p>
+</footer>
+
+<script>
+  const faders = document.querySelectorAll('.fade-in');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => entry.target.classList.add('visible'), i * 80);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  faders.forEach(el => observer.observe(el));
+
+  function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+</script>
 </body>
 </html>
