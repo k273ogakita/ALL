@@ -163,12 +163,12 @@ footer{background:var(--blue-pale)}
 </head>
 <body>
 <header id="site-header">
-<div class="header-sub"><div class="header-sub-left"><a href="medical.html">&larr; 医療ページに戻る</a><a href="clinic-branding.html">ブランディング動画</a><a href="medical-efficiency.html">業務効率化プラン</a></div><div class="header-sub-right"><span>Base</span>熊本市北区梶尾町</div></div>
-<div class="header-main"><a href="medical.html" class="logo">n<em>ARK</em><small>visual media</small></a><div class="header-utils"><a href="#contact" class="util-btn">無料相談はこちら</a><a href="mailto:nark.visual.media@gmail.com" class="util-btn util-contact">メールを送る</a></div></div>
+<div class="header-sub"><div class="header-sub-left"><a href="../medical.html">&larr; 医療ページに戻る</a><a href="branding.html">イメージアップ、信頼構築動画プラン</a><a href="medical-efficiency.html">業務効率化プラン</a></div><div class="header-sub-right"><span>Base</span>熊本市北区梶尾町</div></div>
+<div class="header-main"><a href="../medical.html" class="logo">n<em>ARK</em><small>visual media</small></a><div class="header-utils"><a href="#contact" class="util-btn">無料相談はこちら</a><a href="mailto:nark.visual.media@gmail.com" class="util-btn util-contact">メールを送る</a></div></div>
 </header>
 
 <section class="page-hero">
-<div class="hero-bc"><a href="medical.html">nARK</a><span>/</span>採用課題解決プラン</div>
+<div class="hero-bc"><a href="../medical.html">nARK</a><span>/</span>採用課題解決プラン</div>
 <div class="hero-tag">Recruitment Plan</div>
 <h1>求職者は、応募の前に<br>必ずあなたの病院の<em>HPを見ています。</em></h1>
 <p class="hero-sub">求職者のほとんどは、求人サイトで気になる求人を見つけた後、必ずそのクリニックのホームページを確認してから応募を決めます。「ここなら働いてみたい」と思ってもらえるHPと設計が、採用を変える最も確実な方法です。</p>
@@ -227,20 +227,20 @@ footer{background:var(--blue-pale)}
 <h2 class="st fi">より強力な採用導線を設計したい方には、<em>採用ページと動画のセットがおすすめです。</em></h2>
 <p class="tg-lead fi">採用専用ページだけ・動画だけでも効果はあります。でも、ふたつが揃ったとき、求職者は「ここで働きたい」という確信を持って応募してきます。</p>
 <div class="tgflow fi">
-<div class="tfs"><span class="tfs-i">🔍</span><div class="tfs-l">求人サイトで発見</div><div class="tfs-s">クリニック名を検索してHPへ</div></div>
+<div class="tfs"><span class="tfs-i">🔍</span><div class="tfs-l">求人サイトで発見</div><div class="tfs-s">クリニック名を検索してHPへ</div></div<span class="tfs-b">ご希望があればこちらもお任せ頂けます</span></div>
 <div class="tfa">&rsaquo;</div>
 <div class="tfs prod"><span class="tfs-i">💻</span><div class="tfs-l">採用専用ページを見る</div><div class="tfs-s">整理された情報で「良さそう」と感じる</div><span class="tfs-b">nARKが制作</span></div>
 <div class="tfa">&rsaquo;</div>
 <div class="tfs prod"><span class="tfs-i">🎬</span><div class="tfs-l">採用動画を視聴する</div><div class="tfs-s">院長の人柄・職場の雰囲気が伝わり「ここで働きたい」に変わる</div><span class="tfs-b">nARKが制作</span></div>
 <div class="tfa">&rsaquo;</div>
-<div class="tfs prod"><span class="tfs-i">✉️</span><div class="tfs-l">確信を持って応募</div><div class="tfs-s">すでにクリニックが好きな状態で面接へ</div><span class="tfs-b">nARKが対応も可能</span></div>
+<div class="tfs prod"><span class="tfs-i">✉️</span><div class="tfs-l">確信を持って応募</div><div class="tfs-s">すでにクリニックが好きな状態で面接へ</div><span class="tfs-b">ご希望があればこちらもお任せ頂けます</span></div>
 </div></div>
 </section>
 
 <section class="str-section" id="strength">
 <div class="str-inner">
 <div class="sl fi">Why nARK</div>
-<h2 class="st fi">元看護師だから、<em>「医療スタッフが響く採用コンテンツ」を作れます。</em></h2>
+<h2 class="st fi">元看護師だから、<em>「医療スタッフに響く採用コンテンツ」を作れます。</em></h2>
 <p class="str-lead fi">医療スタッフが転職先を選ぶとき、何を見て何を感じて決断するのか——7年間の看護師経験が、その視点を動画制作と採用専用ページ設計に直結させます。</p>
 <div class="str-grid">
 <div class="si fi"><div class="si-h"><div class="si-b">1</div><h3>求職者が「本当に見たい情報」を知っている</h3></div><p>給与・休日だけでなく「院長の人柄」「スタッフ間の雰囲気」「どんな患者さんが多いか」——現場で転職を経験した立場から、響くポイントを押さえます。</p></div>
@@ -304,45 +304,5 @@ footer{background:var(--blue-pale)}
 const obs=new IntersectionObserver(e=>{e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target)}})},{threshold:0.1});document.querySelectorAll('.fi').forEach(e=>obs.observe(e));
 document.querySelectorAll('.faq-item').forEach(i=>{i.querySelector('.faq-q').addEventListener('click',()=>{const a=i.classList.contains('active');document.querySelectorAll('.faq-item').forEach(j=>{j.classList.remove('active');j.querySelector('.faq-a').classList.remove('open')});if(!a){i.classList.add('active');i.querySelector('.faq-a').classList.add('open')}})});
 </script>
-</body>
-</html>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--accent:#5a9bb8;--blue-text:#1e3d4f;--blue-pale:#f0f8fc;--gray-mid:#dddad4;--white:#fff}
-body{font-family:'Noto Sans JP',sans-serif;color:var(--blue-text);line-height:1.8;font-weight:300;font-size:14px}
-a{text-decoration:none;color:inherit}
-.page-header{background:var(--blue-pale);padding:60px 40px 48px;border-bottom:1px solid var(--gray-mid)}
-.back-link{font-size:11px;letter-spacing:.1em;color:var(--accent);margin-bottom:24px;display:inline-block}
-.back-link:hover{opacity:.7}
-.plan-num{font-family:'Cormorant Garamond',serif;font-size:12px;letter-spacing:.25em;color:var(--accent);margin-bottom:8px}
-.page-header h1{font-family:'Cormorant Garamond',serif;font-size:clamp(24px,4vw,40px);font-weight:300;letter-spacing:.04em;margin-bottom:8px}
-.plan-en{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);opacity:.7}
-.content{max-width:800px;margin:0 auto;padding:60px 40px}
-.content p{font-size:14px;line-height:2.2;margin-bottom:20px;color:#444}
-.cta{text-align:center;padding:60px 40px;background:var(--blue-pale)}
-.cta p{margin-bottom:20px;font-size:13px;color:var(--blue-text);opacity:.75}
-.cta-btn{display:inline-block;border:1px solid var(--accent);padding:14px 44px;font-size:10px;letter-spacing:.28em;text-transform:uppercase;color:var(--blue-text);transition:background .3s,color .3s}
-.cta-btn:hover{background:var(--accent);color:var(--white)}
-</style>
-</head>
-<body>
-
-<div class="page-header">
-  <a href="../index.html" class="back-link">← TOPに戻る</a>
-  <div class="plan-num">02</div>
-  <h1>採用課題解決プラン</h1>
-  <p class="plan-en">Recruitment Plan</p>
-</div>
-
-<div class="content">
-  <p>採用動画・求人サイト・導線設計で総合的にサポートします。</p>
-  <p>企業の魅力を正しく伝え、求職者に選ばれる採用活動へ。「どんな職場か」「どんな人が働いているか」を映像で伝えることで、ミスマッチを減らし、定着率の向上にもつながります。</p>
-  <p>医療・介護・一般企業を問わずご相談ください。</p>
-</div>
-
-<div class="cta">
-  <p>ご相談は無料です。お気軽にお問い合わせください。</p>
-  <a href="../index.html#contact" class="cta-btn">Contact Us</a>
-</div>
-
 </body>
 </html>
