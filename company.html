@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>会社概要 | nARK</title>
+<meta name="description" content="nARK（緒方和奈）の会社概要。屋号・代表者・所在地・事業内容・インボイス登録番号・取引金融機関。">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Noto+Sans+JP:wght@300;400;500&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --dark:        #1e1e1e;
+    --green:       #3d8c62;
+    --green-pale:  #eaf5ef;
+    --terra:       #c8704a;
+    --white:       #ffffff;
+    --off-white:   #f8f7f5;
+    --text:        #1e1e1e;
+    --text-mid:    #6e6e6e;
+    --text-light:  #aeaead;
+    --line:        rgba(61,140,98,0.13);
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--white);
+    color: var(--text);
+    line-height: 1.9;
+  }
+
+  header {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    padding: 20px 48px;
+    display: flex; align-items: center; justify-content: space-between;
+    background: rgba(255,255,255,0.92);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 400; letter-spacing: 0.06em;
+    color: var(--dark); text-decoration: none;
+  }
+  .logo span { color: var(--terra); font-weight: 600; }
+  .back-link {
+    font-size: 12px; letter-spacing: 0.1em;
+    color: var(--text-mid); text-decoration: none;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--dark); }
+
+  main {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 150px 24px 90px;
+  }
+  .page-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; font-style: italic; letter-spacing: 0.12em;
+    color: var(--green); margin-bottom: 10px;
+  }
+  h1 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 30px; font-weight: 400; letter-spacing: 0.06em;
+    color: var(--dark);
+    padding-bottom: 22px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 28px;
+  }
+  .lead {
+    font-size: 14px; font-weight: 300; color: var(--text-mid);
+    margin-bottom: 40px;
+  }
+  h2 {
+    font-family: 'Noto Serif JP', serif;
+    font-size: 17px; font-weight: 400; letter-spacing: 0.08em;
+    color: var(--dark);
+    margin: 44px 0 14px;
+    padding-left: 14px;
+    border-left: 3px solid var(--green);
+  }
+  p, li { font-size: 14px; font-weight: 300; color: var(--text); }
+  ul { padding-left: 1.4em; margin-top: 8px; }
+  li { margin-bottom: 6px; }
+
+  .info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 8px;
+  }
+  .info-table th,
+  .info-table td {
+    font-size: 14px; font-weight: 300;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+    text-align: left;
+  }
+  .info-table th {
+    width: 34%;
+    color: var(--text-mid);
+    font-weight: 400;
+    padding-right: 20px;
+    white-space: nowrap;
+  }
+  .info-table td { color: var(--text); }
+  .info-table tr:last-child th,
+  .info-table tr:last-child td { border-bottom: none; }
+
+  .note {
+    margin-top: 32px;
+    padding: 18px 20px;
+    background: var(--green-pale);
+    font-size: 13px; font-weight: 300; color: var(--text-mid);
+    line-height: 1.85;
+  }
+  .dates {
+    margin-top: 56px;
+    padding-top: 22px;
+    border-top: 1px solid var(--line);
+    font-size: 12px; color: var(--text-light); letter-spacing: 0.08em;
+  }
+
+  footer {
+    padding: 30px 80px;
+    display: flex; justify-content: space-between; align-items: center;
+    border-top: 1px solid var(--line);
+    background: var(--white);
+  }
+  footer p {
+    font-size: 11px; color: var(--text-light); letter-spacing: 0.1em;
+  }
+  footer a {
+    font-size: 11px; color: var(--text-mid); text-decoration: none;
+    letter-spacing: 0.1em;
+  }
+  footer a:hover { color: var(--dark); }
+  .footer-links {
+    display: flex; gap: 28px; flex-wrap: wrap; justify-content: center;
+  }
+
+  @media (max-width: 900px) {
+    header { padding: 16px 24px; }
+    main { padding: 120px 20px 64px; }
+    h1 { font-size: 24px; }
+    .info-table th,
+    .info-table td { display: block; width: 100%; padding: 0; border: none; }
+    .info-table tr {
+      display: block;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .info-table th { padding-bottom: 4px; white-space: normal; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 28px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="index.html" class="logo">n<span>ARK</span></a>
+  <a href="index.html" class="back-link">← トップページへ戻る</a>
+</header>
+
+<main>
+  <p class="page-label">Company Profile</p>
+  <h1>会社概要</h1>
+
+  <p class="lead">
+    法人・医療機関の方からご依頼いただく際の基本情報です。
+    ご不明な点はお問い合わせフォームまたはメールにてご連絡ください。
+  </p>
+
+  <table class="info-table">
+    <tr>
+      <th>屋号</th>
+      <td>nARK</td>
+    </tr>
+    <tr>
+      <th>代表者</th>
+      <td>緒方 和奈（オガタ カズナ）</td>
+    </tr>
+    <tr>
+      <th>事業形態</th>
+      <td>個人事業主</td>
+    </tr>
+    <tr>
+      <th>所在地</th>
+      <td>〒861-5512　熊本県熊本市北区梶尾町</td>
+    </tr>
+    <tr>
+      <th>電話番号</th>
+      <td><a href="tel:08027325456" style="color:inherit;">080-2732-5456</a></td>
+    </tr>
+    <tr>
+      <th>メール</th>
+      <td><a href="mailto:nark.visual.media@gmail.com" style="color:inherit;">nark.visual.media@gmail.com</a></td>
+    </tr>
+    <tr>
+      <th>Webサイト</th>
+      <td><a href="https://nark-movie.com" style="color:inherit;">https://nark-movie.com</a></td>
+    </tr>
+    <tr>
+      <th>インボイス<br>登録番号</th>
+      <td>T7810 0081 12154</td>
+    </tr>
+    <tr>
+      <th>取引金融機関</th>
+      <td>楽天銀行</td>
+    </tr>
+  </table>
+
+  <h2>事業内容</h2>
+  <p>動画制作・HP制作・MEO対策・Meta広告・Instagram運用・パンフレット制作</p>
+
+  <h2>代表者プロフィール</h2>
+  <p>
+    看護師として7年、医療現場で「正しく、わかりやすく伝える」ことの重要性を体感。
+    その視点を活かし、映像・WEB・集客支援を企画から納品まで一貫して手がける。
+  </p>
+
+  <h2>対応エリア</h2>
+  <p>熊本県内全域〜全国対応</p>
+
+  <p class="note">
+    ご請求・お支払いに関するお問い合わせ、見積書・請求書の発行、相見積もりのご依頼も承っております。<br>
+    振込先の詳細は、請求書に記載してお知らせします。
+  </p>
+
+  <p class="dates">最終更新：2026年7月5日</p>
+</main>
+
+<footer>
+  <p>© nARK. All rights reserved.</p>
+  <div class="footer-links">
+    <a href="privacy.html">プライバシーポリシー</a>
+    <a href="policy.html">サイトポリシー</a>
+    <a href="company.html">会社概要</a>
+    <a href="medical.html">医療関係者の方はこちら</a>
+    <a href="visual.media.html">企業・個人事業主の方はこちら</a>
+  </div>
+</footer>
+
+</body>
+</html>
